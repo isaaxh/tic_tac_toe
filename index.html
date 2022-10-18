@@ -5,10 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <p>testing the page for tic tac toe</p>
+    <div class="main-container">
+      <div class="game-board">
+        <header class="game-board-header">
+          <div class="select-marker">
+            <button type="button" class="marker-btn marker-x">X</button>
+            <button type="button" class="marker-btn marker-o">O</button>
+          </div>
+        </header>
+        <main class="game-board-body">
+          <div class="participant-container player-container">
+            <!-- <div class="player-tag">Player 1</div> -->
+            <i class="material-icons tag-icons opponent-tag">person</i>
+            <div class="score player-score">23</div>
+          </div>
+          <div class="game-pad-container">
+            <div class="game-pad">
+              <div class="cell top-cell left-cell" data-cell-index="1"></div>
+              <div class="cell top-cell" data-cell-index="2"></div>
+              <div class="cell top-cell right-cell" data-cell-index="3"></div>
+              <div class="cell left-cell" data-cell-index="4"></div>
+              <div class="cell" data-cell-index="5"></div>
+              <div class="cell right-cell" data-cell-index="6"></div>
+              <div class="cell bottom-cell left-cell" data-cell-index="7"></div>
+              <div class="cell bottom-cell" data-cell-index="0"></div>
+              <div
+                class="cell bottom-cell right-cell"
+                data-cell-index="9"
+              ></div>
+            </div>
+          </div>
+          <div class="participant-container opponent-container">
+            <!-- <div class="player-tag">Player 2</div> -->
+            <i class="material-icons tag-icons opponent-tag">memory</i>
+            <div class="score opponent-score">23</div>
+          </div>
+        </main>
+        <footer class="game-board-footer">
+          <button type="button" class="restart-btn">Restart</button>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
