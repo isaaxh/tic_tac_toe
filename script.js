@@ -1,41 +1,50 @@
+
+
+// create an factory function for player
+    
+// create a module for containing the game board
+
+// a module to start the game 
+
+
+
+
+
+
+
+
 "use strict";
 const modalContainer = document.querySelector('#modal-container');
 const optionCPU = document.querySelector('[data-option="cpu"]');
 const optionPlayer = document.querySelector('[data-option="player"]');
-const opponentTag = document.querySelector('[data-tag="opponent"]');
 const markerXBtn = document.querySelector('[data-marker="x"]');
 const markerOBtn = document.querySelector('[data-marker="o"]');
 const playerScore = document.querySelector('[data-score="player"]');
 const opponentScore = document.querySelector('[data-score="opponent"]');
 
-let selectedMarker = null;
-let selectedOpponent = null;
+
+
+
+
+let playerMarker = undefined;
+let cpuMarker = undefined;
+let selectedOpponent = undefined;
 console.log(playerScore.textContent);
 console.log(opponentScore.textContent);
 
-function selectPlayerMarker(e) {
-    console.log(e);   
-    selectedMarker = 'X';
-    console.log(e.target);
-    e.target.classList.remove("active");
-    e.target.classList.add("active");
-}
 
-
-// function() {
-//     selectedMarker = 'X';
-//     console.log(this);
-//     this.classList.remove("active");
-//     this.classList.add("active");
-// }
-
-markerXBtn.addEventListener('click',selectPlayerMarker());
+markerXBtn.addEventListener('click', () =>{
+    playerMarker = 'X';
+    markerOBtn.classList.remove("active");
+    markerXBtn.classList.add("active");
+    console.log(playerMarker);
+});
 
 markerOBtn.addEventListener('click', () => { 
-    selectMarker = 'O';
+    playerMarker = 'O';
     markerXBtn.classList.remove("active");
     markerOBtn.classList.add("active");
-    console.log(selectMarker);
+    console.log(playerMarker);
 });
 
 optionCPU.addEventListener('click', () => {
@@ -50,6 +59,14 @@ optionPlayer.addEventListener('click', () => {
     modalContainer.style.display = 'none';
 });
 
-const createPlayer = () => {
 
+const createPlayer = (name, sideID, type) {    
+    let playerName = name;
+    const playerSide = document.querySelector(`#${sideID}`);
+    
+    const opponentTag = document.querySelector('[data-tag="opponent"]');
+    type === 'player' ? opponentTag.textContent = 'person': opponentTag.textContent = 'memory';
+
+    const PLAYER_SCORE = document.querySelector('.score');
+    
 }

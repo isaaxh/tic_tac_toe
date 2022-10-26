@@ -106,6 +106,8 @@ body {
     transform: scale(1.05);
 }
 
+
+
 .game-board-body{
     flex: 1;
     display: flex;
@@ -123,6 +125,7 @@ body {
     margin: 5rem auto 0rem;
     font-size: 7rem;
     color: var(--player-color);
+    /* animation: glow 0.3s ease forwards; */
 }
 
 .score{
